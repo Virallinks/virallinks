@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Virallinks</title>
+		<meta name="HandheldFriendly" content="True">
+        <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap">
+		<link rel="stylesheet" type="text/css" href="../css/screen.css">
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+		<style>
+            :root {
+                --font-family-one: 'Inter', sans-serif;
+                --font-weight-one-light: 300;
+                --font-weight-one-bold: 700;
+
+                --font-family-two: 'Inter', sans-serif;
+                --font-weight-two-bold: 700;
+
+                --font-family-three: 'Inter', sans-serif;
+                --font-weight-three-regular: 400;
+                --font-weight-three-medium: 500;
+                --font-weight-three-bold: 700;
+
+                --letter-spacing: -.01em;
+            }
+        </style>
+
+		<meta name="description" content="Virallinks is a platform where you can post your links and adverts for free. Reach a wider range of people and get noticed." />
+        <link rel="canonical" href="https://virallinks.ng/" />
+    
+        <meta property="og:site_name" content="Virallinks" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Virallinks" />
+        <meta property="og:description" content="Virallinks is a platform where you can post your links and adverts for free. Reach a wider range of people and get noticed." />
+        <meta property="og:url" content="https://virallinks.ng/" />
+        
+    
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Virallinks",
+                    "url": "https://virallinks.ng/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://virallinks.ng/images/favicon.png"
+                    }
+                },
+                "url": "https://virallinks.ng/",
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "https://virallinks.ng/"
+                },
+                "description": "Virallinks is a platform where you can post your links and adverts for free. Reach a wider range of people and get noticed."
+            }
+        </script>
+
+        <script defer src="../js/cards.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../css/cards.min.css">
+	</head>
+
+	<body class="home-template">
+		<div class="global-wrap">
+			<div class="global-content">
+				<header class="header-section">
+                    <div class="header-wrap global-padding">
+                        <div class="header-logo"><a href="../index.html" class="is-logo"><img src="../images/logo-color.png"></a>
+                        </div>
+                        <div class="header-nav">
+                            <span class="header-search search-open is-mobile"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m16.822 18.813 4.798 4.799c.262.248.61.388.972.388.772-.001 1.407-.637 1.407-1.409 0-.361-.139-.709-.387-.971l-4.799-4.797c3.132-4.108 2.822-10.005-.928-13.756l-.007-.007-.278-.278a.6985.6985 0 0 0-.13-.107C13.36-1.017 7.021-.888 3.066 3.067c-4.088 4.089-4.088 10.729 0 14.816 3.752 3.752 9.65 4.063 13.756.93Zm-.965-13.719c2.95 2.953 2.95 7.81 0 10.763-2.953 2.949-7.809 2.949-10.762 0-2.951-2.953-2.951-7.81 0-10.763 2.953-2.95 7.809-2.95 10.762 0Z"/></svg></span>
+                            <input id="toggle" class="header-checkbox" type="checkbox">
+                            <label class="header-toggle" for="toggle">
+                                <span>
+                                    <span class="bar"></span>
+                                    <span class="bar"></span>
+                                    <span class="bar"></span>
+                                </span>
+                            </label>
+
+                            <nav>
+                                <ul>
+                                    <li><a href="../contact.html">Contact</a></li>
+                                    <li><a href="../categories.html">Categories</a></li>
+                                    <li><a href="../search.html">Search</a></li>
+                                    <li class="signup"><a href="../post.html" class="global-button" style="background-color: #10153c; color: #fff;">Create</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </header>				
+                
+                <!--*****MAIN******-->
+                <main class="global-main">
+
+					<div class="archive-section is-image">
+
+                    <div class="archive-image global-image">
+                        <img src="../images/whatsappgroups.jpg" loading="lazy" alt="Story">	
+                    </div>
+
+	                <h1 class="archive-title global-title is-tag" >Whatsapp Groups<span id="number">0</span></h1>
+                    <p class="archive-excerpt global-excerpt" id="noAd" style="margin-top: 50px;">Loading adverts...</p>
+	
+                    </div>
+
+                    <div class="loop-section global-padding">
+
+                        <div class="global-subtitle">
+                            <!--<small class="global-subtitle-title">
+                            Check out the <span>latest adverts</span></small>-->
+                        </div>
+
+                        <div class="loop-wrap" id="adDiv"  >
+                        </div>
+                       
+                    </div>
+
+				</main>
+
+				<footer class="footer-section global-footer">
+                    <div class="footer-wrap global-padding">
+                        
+                        <div class="footer-container">
+       
+                            <div class="footer-nav">
+                                <div class="footer-nav-column is-social">
+                                    
+                                </div>
+                
+                                <div class="footer-nav-column">
+                                    
+                                </div>
+                                
+                                <div class="footer-nav-column">
+                                    
+                                </div>
+                                
+                                <div class="footer-nav-column">
+                                    
+                                </div>
+                
+                            </div>
+
+                            <div class="footer-copyright">
+                                &copy; <a href="https://virallinks.ng">Virallinks</a> 2022 
+                            </div>
+                        </div>
+                    </div>
+                </footer>			
+            </div>
+		</div>
+
+		<div id="notifications" class="global-notification">
+            <div class="signup">Great! You’ve successfully posted an advert.</div>
+            <div class="expired">Your link has expired</div>
+        </div>
+
+		<div class="search-section">
+	        <div class="search-wrap">
+		        <div class="search-content">
+                    <form class="search-form">
+                        <input class="search-input" type="text" placeholder="Search">
+                        <div class="search-meta">
+                            <span class="search-info">Please enter at least 3 characters</span>
+                            <span class="search-counter is-hide">
+                                <span class="search-counter-results">0</span>
+                                Results for your search
+                            </span>
+                        </div>
+                        <span class="search-close"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.997 10.846L1.369.219 1.363.214A.814.814 0 00.818.005.821.821 0 000 .822c0 .201.074.395.208.545l.006.006L10.842 12 .214 22.626l-.006.006a.822.822 0 00-.208.546c0 .447.37.817.818.817a.814.814 0 00.551-.215l10.628-10.627 10.628 10.628.005.005a.816.816 0 001.368-.603.816.816 0 00-.213-.552l-.006-.005L13.151 12l10.63-10.627c.003 0 .004-.003.006-.005A.82.82 0 0024 .817a.817.817 0 00-1.37-.602l-.004.004-10.63 10.627z"/></svg></span>
+                    </form>
+                    <div class="search-results global-image"></div>
+		        </div>
+	        </div>
+	        <div class="search-overlay"></div>
+        </div>
+	
+        <script src="../js/global.js"></script>
+	    <script src="../js/index.js"></script>
+        <script src="../js/goods.js"></script>
+
+	</body>
+</html>
